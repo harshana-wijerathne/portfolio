@@ -1,7 +1,11 @@
-import Header from "@/(component)/header";
+import React from 'react';
+import AboutSection from "@/(component)/AboutSection";
 
-export default function about(){
-    return(
-        <div></div>
-    )
-};
+
+export default function AboutPage() {
+    return (
+        <div className={"mt-4"} style={{ backgroundColor: '#000' }}>
+           <AboutSection/>
+        </div>
+    );
+}

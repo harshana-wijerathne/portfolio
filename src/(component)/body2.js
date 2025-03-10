@@ -16,7 +16,10 @@ function Body(props) {
                 />
             </div>
             <div className="col-12 col-lg-6 d-flex align-items-center flex-column">
-                <p className="fs-1 Honk.ClassName"> 👋 Hi, I'm Harshana Wijerathne</p>
+                {/*<p className="fs-1 Honk.ClassName fw-bold"> 👋 Hi, I'm Harshana Wijerathne</p>*/}
+                <h2 className="display-4 fw-bold mb-4 ">
+                    👋 Hi, I'm <br/> Harshana <span className="text-primary"> Wijerathne</span>
+                </h2>
                 <p className="fs-3">Full Stack Developer</p>
                 <div className="px-2 w-100 d-none d-sm-block">
                     <p className="fs-5 text-justify px-2 ">

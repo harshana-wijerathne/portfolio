@@ -1,11 +1,24 @@
-import React, {createContext} from 'react';
+import { createContext, useContext, useState } from 'react';
 
-function DarkTheme(props) {
+const UserContext = createContext();
+
+export const UserProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
+
+    const login = (name) => {
+        setUser({ name });
+    };
+
+    const logout = () => {
+        setUser(null);
+    };
+
     return (
-        <div>
-
-        </div>
+        <UserContext.Provider value={{ user, login, logout }}>
+            {children}
+        </UserContext.Provider>
     );
-}
+};
 
-export default DarkTheme;
+// 3. Custom hook for convenience (optional)
+export const useUser = () => useContext(UserContext);
